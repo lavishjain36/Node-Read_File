@@ -8,9 +8,9 @@ const os=require("os");
 const http=require('http');
 const PORT=8000;
 http.createServer((req,res)=>{
-    res.writeHeade(200,{'Content-Type':'text/html'});
-    res.write('<h1>Hello World</h1>');
+    res.writeHeader(200,{'Content-Type':'text/html'});
+    res.write('Hello Everyone.Welcome to Node.js');
     res.end();
 }).listen(PORT,()=>{
-    console.log(`Server is running on port ${PORT}`);
+    console.log('Listening to',PORT);
 });
