@@ -9,8 +9,21 @@ const http=require('http');
 const PORT=8000;
 http.createServer((req,res)=>{
     res.writeHeader(200,{'Content-Type':'text/html'});
-    res.write('Hello Everyone.Welcome to Node.js');
-    res.end();
+    // let data=`
+    // <div>
+    // <h1>Hello</h1>
+    // <h2>Welcome</h2>
+    // <h3>TO</h3>
+    // <h4>NodeJS</h4>
+    // </div>
+    
+    // `
+
+    let data=[
+        {user:"Lavish"},
+        {user:"Kushal"}
+    ]
+    res.write(JSON.stringify(data));
 }).listen(PORT,()=>{
     console.log('Listening to',PORT);
 });
